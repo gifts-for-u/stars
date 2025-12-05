@@ -1,0 +1,153 @@
+/* ===========================
+   Tap Story Styles
+   =========================== */
+
+.story-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Indicate clickable */
+}
+
+.tap-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  opacity: 0.6;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.slides-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Common Slide Styles */
+.story-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none; /* Let clicks pass through to container */
+  padding: 2rem;
+  
+  /* Text styling for simple text slides */
+  max-width: 80vw;
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.8;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.story-slide.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Enable interaction if needed (buttons) */
+}
+
+/* Message Card Styles */
+.message-card {
+  max-width: 85vw;
+  padding: 1.5rem 1.8rem;
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(var(--blur-glass));
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: var(--shadow-soft);
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.7;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+
+
+/* Closing Slide Styles */
+.closing-slide {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.closing-text {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  text-shadow: 0 0 20px rgba(255, 209, 255, 0.5);
+  line-height: 1.4;
+}
+
+.closing-subtext {
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.closing-button {
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family);
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-full);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+}
+
+.closing-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 209, 255, 0.4),
+              0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.closing-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .story-slide {
+    max-width: 60vw;
+    font-size: 1.2rem;
+  }
+  
+  .message-card {
+    max-width: 60vw;
+    padding: 2rem 2.5rem;
+  }
+}

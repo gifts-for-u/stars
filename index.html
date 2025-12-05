@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A heartfelt apology under the stars">
+  <title>Untuk Kamu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Stars Container -->
+  <div id="stars-container" class="stars-container"></div>
+
+  <!-- Audio Element -->
+  <audio id="background-audio" loop>
+    <source src="public\audio\Nothing's Gonna Change My Love For You _ Piano Cover with Strings (with PIANO SHEET).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Intro Screen -->
+  <div id="intro-screen" class="intro-screen">
+    <div class="intro-content">
+      <h1 id="greeting-text" class="greeting-text">haloo cantik akuu</h1>
+      <button id="next-button" class="next-button">Lanjut sayang</button>
+      <button id="audio-toggle" class="audio-toggle">nyalain audio</button>
+    </div>
+  </div>
+
+  <!-- Story Screen (Tap Navigation) -->
+  <div id="story-container" class="story-container hidden">
+    <div class="tap-hint">tap layar untuk lanjut sayang</div>
+    
+    <div id="slides-wrapper" class="slides-wrapper">
+      <!-- Section 1: Intro -->
+      <section class="story-slide active">
+        <p>Aku bikin ini untuk minta maaf sama kamu karena aku melakukan banyak kesalahan di hubungan ini, tetapi aku tetep mau sama kamu, aku tetep sayang sama kamu, aku tetep cinta sama kamu, maka dari itu aku meminta maaf dan izinkan aku untuk memperbaiki hubungan ini.</p>
+      </section>
+
+      <!-- Section 2: Message -->
+      <section class="story-slide">
+        <div class="message-card">
+          <p>Aku masih sering buat salah, aku masih sering bikin kamu marah, aku masih sering kurang inisiatif, aku minta maaff sayangg. Walaupun begitu, aku ga berhenti buat mencintai kamu, walaupun jujur pas kita lagi capek, aku pengennya bobo aja dulu bentar hehehe, tapi aku ga lakuin ituu. Karena aku ngga mau bikin kamu makin ngerasa sendirian.</p>
+        </div>
+      </section>
+
+      <!-- Section 4: Intro -->
+      <section class="story-slide">
+        <p>Disaat momen-momen atau hal-hal kecil di hubungan kita itu kita punya tapi orang lain gabisa itu ada kesenangan tersendiri buat aku, dan aku harap kamu juga begitu. Itu juga membuat aku semakin yakin aku gaboleh kehilangan kamu🥺</p>
+      </section>
+
+      <!-- Section 5: Message -->
+      <section class="story-slide">
+        <div class="message-card">
+          <p>Aku mau kamu, aku sayang kamu, aku cinta kamu, u r my moon in the night sky baby❣️</p>
+        </div>
+      </section>
+
+      <!-- Section 4: Intro -->
+      <section class="story-slide">
+        <p>Aku juga bikin ini buat nyemangatin dan doain kamu untuk interview hari senin nantii</p>
+      </section>
+
+      <!-- Section 5: Message -->
+      <section class="story-slide">
+        <div class="message-card">
+          <p>Bismillah yaa sayangg akuuu untuk interview-nya nantiii, nanti kita bisa latihan lagi biar kamu makin lancar, makin yakin jawabnya, makin pede, makin mantep, pokonya makin makin makin dehhh. Aku yakin kamu pasti bisa lewatin tahap ini dan semoga, semoga, semoga yang ini nyangkut dan kamu bisa pindah secepetnya aaamiiin aaamiiin ya rabbal alamiiinn</p>
+        </div>
+      </section>
+
+      <!-- Closing Section -->
+      <section class="story-slide closing-slide">
+        <h2 class="closing-text">Aku sayang banya banya sama</h2>
+        <p class="closing-subtext">Boleh ya kita mulai lagi pelan-pelan… sambil aku belajar ngerti kamu lebih baik.</p>
+        <button id="final-button" class="closing-button">boleh peluk kamu?</button>
+      </section>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
