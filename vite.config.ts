@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/stars/', // Change 'stars' to match your GitHub repository name
+  // Use relative asset paths so the site works on any deployment path
+  base: './',
   build: {
     outDir: 'dist',
   },
